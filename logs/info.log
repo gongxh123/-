@@ -96,3 +96,101 @@
     
 2020-07-10 18:03:14,811 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"产品更新成功1条；商品更新1条。","data":""}  
   预期结果：2000
+2020-07-10 20:09:36,355 - tools.log_tool - INFO - -----------request-----------
+    POST http://192.168.1.151:8084/product/addProd
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ==', 'Content-Length': '178', 'Content-Type': 'application/json'}
+
+    b'{"brand": "\\u5c0f\\u7c73", "colors": ["\\u9ed1\\u8272"], "price": 10000, "productCode": "xcu6S9D0", "productName": "gongxh2480", "sizes": ["5"], "type": "\\u5168\\u9ed1,\\u5168\\u767d"}'
+    
+2020-07-10 20:09:36,356 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"创建产品成功,产品ID为:8684。共生成商品：1件。","data":[{"skuId":null,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":10000,"color":"黑色","size":"5","status":null,"createTime":null,"updateTime":null}]}
+    
+2020-07-10 20:09:36,358 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"创建产品成功,产品ID为:8684。共生成商品：1件。","data":[{"skuId":null,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":10000,"color":"黑色","size":"5","status":null,"createTime":null,"updateTime":null}]}  
+  预期结果：2000
+2020-07-10 20:09:36,431 - tools.log_tool - INFO - -----------request-----------
+    GET http://192.168.1.151:8084/product/getSkuByProdCode?prodCode=xcu6S9D0
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ=='}
+
+    None
+    
+2020-07-10 20:09:36,431 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"查询成功","data":[{"skuId":41083,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":10000,"color":"黑色","size":"5","status":0,"createTime":"2020-07-10T12:09:37.000+0000","updateTime":"2020-07-10T12:09:37.000+0000"}]}
+    
+2020-07-10 20:09:36,432 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"查询成功","data":[{"skuId":41083,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":10000,"color":"黑色","size":"5","status":0,"createTime":"2020-07-10T12:09:37.000+0000","updateTime":"2020-07-10T12:09:37.000+0000"}]}  
+  预期结果：2000
+2020-07-10 20:09:36,524 - tools.log_tool - INFO - -----------request-----------
+    POST http://192.168.1.151:8084/product/changePriceByProdCode?prodCode=xcu6S9D0&price=1000
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ==', 'Content-Length': '0'}
+
+    None
+    
+2020-07-10 20:09:36,525 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"价格更新成功，更新了1件商品。","data":""}
+    
+2020-07-10 20:09:36,526 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"价格更新成功，更新了1件商品。","data":""}  
+  预期结果：2000
+2020-07-10 20:09:36,631 - tools.log_tool - INFO - -----------request-----------
+    GET http://192.168.1.151:8084/product/getSkuByProdCode?prodCode=xcu6S9D0
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ=='}
+
+    None
+    
+2020-07-10 20:09:36,631 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"查询成功","data":[{"skuId":41083,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":1000,"color":"黑色","size":"5","status":0,"createTime":"2020-07-10T12:09:37.000+0000","updateTime":"2020-07-10T12:09:37.000+0000"}]}
+    
+2020-07-10 20:09:36,632 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"查询成功","data":[{"skuId":41083,"productCode":"xcu6S9D0","skuCode":"xcu6S9D0_黑色_5","skuName":"gongxh2480黑色5","skuPrice":1000,"color":"黑色","size":"5","status":0,"createTime":"2020-07-10T12:09:37.000+0000","updateTime":"2020-07-10T12:09:37.000+0000"}]}  
+  预期结果：2000
+2020-07-10 20:09:36,652 - tools.log_tool - INFO - -----------request-----------
+    POST http://192.168.1.151:8084/product/changePrice?SKU=xcu6S9D0_%E9%BB%91%E8%89%B2_5&price=200
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ==', 'Content-Length': '0'}
+
+    None
+    
+2020-07-10 20:09:36,653 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"价格更新成功,xcu6S9D0_黑色_5价格为200分。","data":""}
+    
+2020-07-10 20:09:36,653 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"价格更新成功,xcu6S9D0_黑色_5价格为200分。","data":""}  
+  预期结果：2000
+2020-07-10 20:09:36,714 - tools.log_tool - INFO - -----------request-----------
+    POST http://192.168.1.151:8084/product/soldOut?productCode=xcu6S9D0
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ==', 'Content-Length': '0'}
+
+    None
+    
+2020-07-10 20:09:36,714 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"产品更新成功1条；商品更新1条。","data":""}
+    
+2020-07-10 20:09:36,714 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"产品更新成功1条；商品更新1条。","data":""}  
+  预期结果：2000
+2020-07-10 20:09:36,776 - tools.log_tool - INFO - -----------request-----------
+    POST http://192.168.1.151:8084/product/toPreSale?productCode=xcu6S9D0
+    {'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'token': 'eyJ0aW1lT3V0IjoxNTk0Mzg0Nzc3MTIyLCJ1c2VySWQiOjI1MjIyLCJ1c2VyTmFtZSI6Imdvbmd4aDA4NTcifQ==', 'Content-Length': '0'}
+
+    None
+    
+2020-07-10 20:09:36,778 - tools.log_tool - INFO - ----------------response---------------
+    200
+    {'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 10 Jul 2020 12:09:37 GMT'}
+
+    {"code":2000,"message":"产品更新成功1条；商品更新1条。","data":""}
+    
+2020-07-10 20:09:36,778 - tools.log_tool - INFO - 实际结果：{"code":2000,"message":"产品更新成功1条；商品更新1条。","data":""}  
+  预期结果：2000
